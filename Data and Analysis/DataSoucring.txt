@@ -1,0 +1,10 @@
+This file details the sourcing of the data contained within each CSV file in this directory:
+
+IncomeOfCollegeMajors.csv:
+https://www.kaggle.com/wsj/college-salaries
+
+EmploymentOfCollegeMajors.csv:
+https://www.kaggle.com/fivethirtyeight/fivethirtyeight
+
+HoursSpentStudyingByMajors.csv:
+https://www.statista.com/statistics/226433/college-student-study-hours-by-major-2011/
