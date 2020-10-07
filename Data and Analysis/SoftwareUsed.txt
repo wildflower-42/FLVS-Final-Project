@@ -1,0 +1,12 @@
+Software used to create the files seen in this directory:
+1. Micrsoft Edge (Web Browser)
+2. Kaggle.com (Data Science and Machine Learning forums and dataset hosting website)
+3. Statista.com (Dataset hosting service)
+4. Google Dataset Search (Dataset search engine)
+5. Github (Git repository hosting service and website)
+6. Github Desktop (Desktop Git Client)
+7. Microsoft Excel (Desktop Spreadsheet Software)
+8. Google Sheets (Cloud-Based Spreadsheet Software)
+9. Python 3.8.6 (Programing Langauge)
+10. CSV (File Format)
+11. Visual Studio Code (Text Editor/Integrated Development Enviroment)
