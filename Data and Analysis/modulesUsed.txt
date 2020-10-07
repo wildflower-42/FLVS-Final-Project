@@ -1,0 +1,5 @@
+The following Python 3.8.6 modules where used to create the files countained within this repository:
+1. csv
+2. numpy
+3. matplotlib
+4. math
