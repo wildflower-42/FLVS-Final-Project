@@ -1,59 +1,95 @@
+
+# About screen:
+def about():
+    print("""
+                                                                +-------------------------+
+                                                                |       +-----------+     |
+                                                                |          |        |     |
+                                                                |    +---------+------+   |
+                                                                |          |   |    | |   |
+                                                                |          |   |    | |   |
+                                                                |          |   |    | |   |
+                                                                | +--------------+  | |   |
+                                                                |          |   |    | |   |
+                                                                |          |   |    | |   |
+                                                                |          +--------+ |   |
+                                                                |              |------+   |
+                                                                +-------------------------+
+                                                                |Yukon Development Studios|
+                                                                +-------------------------+
+                                                                       Copyright 2020
+    """)
+    input("Please Press any key to continue:\n>")
+
+
 studentMajor = ""
-def majorInformation(infoType,rating):
-    #This section of this function deals with information that has to do with majors and their intensity:
+
+
+def majorInformation(infoType, rating):
+    # This section of this function deals with information that has to do with majors and their intensity:
     if infoType == "intensity":
-        if rating =="1":
-            return ["Business Adminstraton","Leisure Studies", "Physical Education", "Marketing"]
-        elif rating =="2":
-            return ["Finnance","Psychology","Economics","Sociology","Political Science"]
-        elif rating =="3":
-            return ["Computer Science","History","Accounting","Elementary Education","English","Theater"]
-        elif rating =="4":
-            return ["Anthropology","Philosophy","Mathematics","Biology","Music"]
-        elif rating =="5":
-            return ["Nursing","Art","Chemistry","Physics","Architecture"]
-    #This section of this function deals with information that has to do with majors and their average starting salaries
+        if rating == "1":
+            return ["Business Adminstraton", "Leisure Studies", "Physical Education", "Marketing"]
+        elif rating == "2":
+            return ["Finnance", "Psychology", "Economics", "Sociology", "Political Science"]
+        elif rating == "3":
+            return ["Computer Science", "History", "Accounting", "Elementary Education", "English", "Theater"]
+        elif rating == "4":
+            return ["Anthropology", "Philosophy", "Mathematics", "Biology", "Music"]
+        elif rating == "5":
+            return ["Nursing", "Art", "Chemistry", "Physics", "Architecture"]
+    # This section of this function deals with information that has to do with majors and their average starting salaries
     elif infoType == "salary":
         if rating == "y":
-            return ["Computer Science","Psychology","Economics","Marketing","Physics","Chemistry"]
+            return ["Computer Science", "Psychology", "Economics", "Marketing", "Physics", "Chemistry"]
         elif rating == "n":
-            return ["Business Adminstraton","Leisure Studies", "Physical Education", "Marketing","Finnance","Psychology","Economics","Sociology","Political Science","Computer Science","History","Accounting","Elementary Education","English","Theater","Anthropology","Philosophy","Mathematics","Biology","Music","Nursing","Art","Chemistry","Physics","Architecture"]
-    #This section of this function deals with information that has to do with majors and their relative popularity/size
+            return ["Business Adminstraton", "Leisure Studies", "Physical Education", "Marketing", "Finnance", "Psychology", "Economics", "Sociology", "Political Science", "Computer Science", "History", "Accounting", "Elementary Education", "English", "Theater", "Anthropology", "Philosophy", "Mathematics", "Biology", "Music", "Nursing", "Art", "Chemistry", "Physics", "Architecture"]
+    # This section of this function deals with information that has to do with majors and their relative popularity/size
     elif infoType == "popularity":
         if rating == "1":
-            return ["Business Adminstraton","Marketing","Physical Education","Elementary Education","English","Nursing","Art","Sociology","Political Science","Architecture"]
+            return ["Business Adminstraton", "Marketing", "Physical Education", "Elementary Education", "English", "Nursing", "Art", "Sociology", "Political Science", "Architecture"]
         elif rating == "2":
-            return ["Business Adminstraton","Leisure Studies", "Physical Education", "Marketing","Finnance","Psychology","Economics","Sociology","Political Science","Computer Science","History","Accounting","Elementary Education","English","Theater","Anthropology","Philosophy","Mathematics","Biology","Music","Nursing","Art","Chemistry","Physics","Architecture"]
-        elif rating == "3": 
-            return ["Physics","Chemistry","Leisure Studies","Anthropology","Mathematics","Biology"]
-#This function asks the user for an input, and then based on that input returns the proper results from another function that indexes the results this function is trying to draw from:
+            return ["Business Adminstraton", "Leisure Studies", "Physical Education", "Marketing", "Finnance", "Psychology", "Economics", "Sociology", "Political Science", "Computer Science", "History", "Accounting", "Elementary Education", "English", "Theater", "Anthropology", "Philosophy", "Mathematics", "Biology", "Music", "Nursing", "Art", "Chemistry", "Physics", "Architecture"]
+        elif rating == "3":
+            return ["Physics", "Chemistry", "Leisure Studies", "Anthropology", "Mathematics", "Biology"]
+# This function asks the user for an input, and then based on that input returns the proper results from another function that indexes the results this function is trying to draw from:
+
+
 def intensityFunction():
-    intensity=input("On a scale of 1-5, how intense do you wish your classes to be?")
+    intensity = input(
+        "On a scale of 1-5, how intense do you wish your classes to be?")
     if intensity == "1":
-        return majorInformation("intensity","1")
+        return majorInformation("intensity", "1")
     elif intensity == "2":
-        return majorInformation("intensity","2")
+        return majorInformation("intensity", "2")
     elif intensity == "3":
-        return majorInformation("intensity","3")
+        return majorInformation("intensity", "3")
     elif intensity == "4":
-        return majorInformation("intensity","4")
+        return majorInformation("intensity", "4")
     elif intensity == "5":
-        return majorInformation("intensity","5")
-#This function asks the user for an input, and then based on that input returns the proper results from another function that indexes the results this function is trying to draw from:
+        return majorInformation("intensity", "5")
+# This function asks the user for an input, and then based on that input returns the proper results from another function that indexes the results this function is trying to draw from:
+
+
 def salaryFunction():
-    salary=input("Do you care if you have a high starting salary?(y/n)")
+    salary = input("Do you care if you have a high starting salary?(y/n)")
     if salary == "y":
-        return majorInformation("salary","y")
+        return majorInformation("salary", "y")
     elif salary == "n":
-        return majorInformation("salary","n")
+        return majorInformation("salary", "n")
+
+
 def popularityFunction():
-    popularity=input("Do you want a major that has a large number of people in it?\n1. Yes\n2. Don't Care\n3. No\n>")
+    popularity = input(
+        "Do you want a major that has a large number of people in it?\n1. Yes\n2. Don't Care\n3. No\n>")
     if popularity == "1":
-        return majorInformation("popularity","1")
+        return majorInformation("popularity", "1")
     elif popularity == "2":
-        return majorInformation("popularity","2")
+        return majorInformation("popularity", "2")
     elif popularity == "3":
-        return majorInformation("popularity","3")
+        return majorInformation("popularity", "3")
+# This function computes all the main functions for finding data about our user through a survey, then returns it in the form of a set:
+
 
 def majorDecision():
     intensity = intensityFunction()
@@ -61,18 +97,31 @@ def majorDecision():
     popularity = popularityFunction()
     majorsList = set(intensity) & set(salary) & set(popularity)
     return majorsList
+# This function lists applicable majors for a prospective student:
+
+
 def majorSelect(majorsList):
     print("Please select your major of choice:\n(Please type the full name of the major that you are selecting)\n\n")
     for n in majorsList:
         print(n)
+# This function records the student's major to a global variable which contains the student's recorded major to be utilized in all other functions:
+
+
 def majorRecord(majorOfChoice):
     studentMajor == majorOfChoice
+# This function displays all majors out for a prospective applicant, and then allows them to choose from them:
+
+
 def registerMajor():
-    majorsList = ["Business Adminstraton","Leisure Studies", "Physical Education", "Marketing","Finnance","Psychology","Economics","Sociology","Political Science","Computer Science","History","Accounting","Elementary Education","English","Theater","Anthropology","Philosophy","Mathematics","Biology","Music","Nursing","Art","Chemistry","Physics","Architecture"]
+    majorsList = ["Business Adminstraton", "Leisure Studies", "Physical Education", "Marketing", "Finnance", "Psychology", "Economics", "Sociology", "Political Science", "Computer Science",
+                  "History", "Accounting", "Elementary Education", "English", "Theater", "Anthropology", "Philosophy", "Mathematics", "Biology", "Music", "Nursing", "Art", "Chemistry", "Physics", "Architecture"]
     print("Please select a major from the list:\n(Please type the full name of the major that you are selecting)\n\n")
     for n in majorsList:
         print(n)
     studentMajor = input(">")
+# This function displays a table, which contains part 1 of a major's salary:
+
+
 def salaryTable1():
     print("""
 +--------------------------------------+------------------------+--------------------------+---------------------------------------------------+
@@ -130,6 +179,9 @@ def salaryTable1():
 | Chemical Engineering                 |                  63200 |                   107000 |                                              69.3 |
 +--------------------------------------+------------------------+--------------------------+---------------------------------------------------+
         """)
+# This function displays a table, which contains part 2 of a major's salary:
+
+
 def salaryTable2():
     print("""
     
@@ -188,10 +240,12 @@ def salaryTable2():
 |                             71900 |                             87300 |                            143000 |                            194000 |
 +-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+
     """)
+# This function pulls the appropriate table for the user's inputted query:
+
+
 def dataAppendix(Query):
-    
     if Query == "salaries":
-        x=1
+        x = 1
         while x == 1:
             salaryTable1()
             input("1. Next Page\n>")
@@ -259,6 +313,9 @@ def dataAppendix(Query):
 | Architecture            |                                             23.7 |
 +-------------------------+--------------------------------------------------+
         """)
+# Displays a submenu to explore data that has to do with diffrent majors:
+
+
 def majorExplorationSubmenu():
     print("""
     Explore our major options:\n
@@ -277,6 +334,9 @@ def majorExplorationSubmenu():
         dataAppendix("difficulty")
     elif menuResponse == "4":
         pass
+# Displays a submenu that contains data having to do with the calculator:
+
+
 def calculatorSubmenu():
     print("""
     Please choose a function:
@@ -290,41 +350,42 @@ def calculatorSubmenu():
     """)
     menuInput = input(">")
     if menuInput == "1":
-        num1 = input("n1:\n")
-        num2 = input("n2:\n")
+        num1 = input("n1:")
+        num2 = input("n2:")
         print(float(num1)+float(num2))
         input("Press any key to continue:\n>")
     elif menuInput == "2":
-        num1 = input("n1:\n")
-        num2 = input("n2:\n")
+        num1 = input("n1:")
+        num2 = input("n2:")
         print(float(num1)-float(num2))
         input("Press any key to continue:\n>")
     elif menuInput == "3":
-        num1 = input("n1:\n")
-        num2 = input("n2:\n")
+        num1 = input("n1:")
+        num2 = input("n2:")
         print(float(num1)*float(num2))
         input("Press any key to continue:\n>")
     elif menuInput == "4":
-        num1 = input("n1:\n")
-        num2 = input("n2:\n")
+        num1 = input("n1:")
+        num2 = input("n2:")
         print(float(num1)/float(num2))
         input("Press any key to continue:\n>")
     elif menuInput == "5":
         summationVector = []
-        n = input("How many numbers would you like to summate?\n>")
-        x=0
+        n = input("How many numbers would you like to Average?\n>")
+        x = 0
         while x != int(n):
-            x=+1
-            num = input("n"+str(n)+":")
+            x = x+1
+            num = input("n"+str(x)+":")
             summationVector.append(float(num))
+        print("Here is the summation of those numbers:")
         print(sum(summationVector))
         input("Press any key to continue:\n>")
     elif menuInput == "6":
         summationVector = []
         n = input("How many numbers would you like to Average?\n>")
-        x=0
+        x = 0
         while x != int(n):
-            x=x+1
+            x = x+1
             num = input("n"+str(x)+":")
             summationVector.append(float(num))
         vectorSize = len(summationVector)
@@ -334,7 +395,9 @@ def calculatorSubmenu():
         input("Press any key to continue:\n>")
     elif menuInput == "7":
         pass
-#This function creates a block of pre-formated menu text for our program:
+# This function creates a block of pre-formated menu text for our program:
+
+
 def menu():
     print('''\n                                                           
         88b           d88   ad88888ba         db         88888888ba  
@@ -353,15 +416,17 @@ def menu():
     print("5. Calculator")
     print("6. Quit")
 
-#This function creates the main menu loop:
+# This function creates the main menu loop:
+
+
 def mainMenu():
-    #This line opens up the display for our main menu:
+    # This line opens up the display for our main menu:
     menu()
-    #This section of code creates inputs for each option displayed in the above menu:
+    # This section of code creates inputs for each option displayed in the above menu:
     menuInput = input(">")
-    #Each menu item returns a specific string value (which is a number in this case) to the function.
-    #This is so we can call this main menu function and figure out what we selected.
-    #We can then use those responses in diffrent functions later on!
+    # Each menu item returns a specific string value (which is a number in this case) to the function.
+    # This is so we can call this main menu function and figure out what we selected.
+    # We can then use those responses in diffrent functions later on!
     if menuInput == "1":
         return "1"
     elif menuInput == "2":
@@ -374,21 +439,26 @@ def mainMenu():
         return "5"
     elif menuInput == "6":
         return "6"
+# This is the main menu loop:
+
+
 def menuLoop():
-    #This section creates an indefinite loop for our main menu:
-    x = 1 
-    while x == 1: 
+    # This section creates an indefinite loop for our main menu:
+    x = 1
+    while x == 1:
         state = mainMenu()
         if state == "1":
             process = majorDecision()
             majorSelect(process)
             majorOfChoice = input(">")
             majorRecord(majorOfChoice)
-            print("Thank you for selecting your new major!\nYou have officially been recorded as being a "+studentMajor+" major!!!!")
+            print("Thank you for selecting your new major!\nYou have officially been recorded as being a " +
+                  studentMajor+" major!!!!")
             input("Press any key to continue:\n>")
         elif state == "2":
             registerMajor()
-            print("Thank you for selecting your new major!\nYou have officially been recorded as being a "+studentMajor+" major!!!!")
+            print("Thank you for selecting your new major!\nYou have officially been recorded as being a " +
+                  studentMajor+" major!!!!")
             input("Press any key to continue:\n>")
         elif state == "3":
             majorExplorationSubmenu()
@@ -396,7 +466,11 @@ def menuLoop():
             about()
         elif state == "5":
             calculatorSubmenu()
-        #Instead of calling a function, this "elif(xyz)" statement breaks the main menu loop, and thus ends the program:
+        # Instead of calling a function, this "elif(xyz)" statement breaks the main menu loop, and thus ends the program:
         elif state == "6":
             break
+        else:
+            pass
+
+
 menuLoop()
