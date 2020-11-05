@@ -317,8 +317,8 @@ def calculatorSubmenu():
             x=+1
             num = input("n"+str(n)+":")
             summationVector.append(float(num))
-            input("Press any key to continue:\n>")
         print(sum(summationVector))
+        input("Press any key to continue:\n>")
     elif menuInput == "6":
         summationVector = []
         n = input("How many numbers would you like to Average?\n>")
@@ -327,10 +327,11 @@ def calculatorSubmenu():
             x=x+1
             num = input("n"+str(x)+":")
             summationVector.append(float(num))
-            input("Press any key to continue:\n>")
         vectorSize = len(summationVector)
         summation = sum(summationVector)
+        print("Average of set:")
         print(summation/vectorSize)
+        input("Press any key to continue:\n>")
     elif menuInput == "7":
         pass
 #This function creates a block of pre-formated menu text for our program:
