@@ -293,37 +293,43 @@ def calculatorSubmenu():
         num1 = input("n1:\n")
         num2 = input("n2:\n")
         print(float(num1)+float(num2))
+        input("Press any key to continue:\n>")
     elif menuInput == "2":
         num1 = input("n1:\n")
         num2 = input("n2:\n")
         print(float(num1)-float(num2))
+        input("Press any key to continue:\n>")
     elif menuInput == "3":
         num1 = input("n1:\n")
         num2 = input("n2:\n")
         print(float(num1)*float(num2))
+        input("Press any key to continue:\n>")
     elif menuInput == "4":
         num1 = input("n1:\n")
         num2 = input("n2:\n")
         print(float(num1)/float(num2))
+        input("Press any key to continue:\n>")
     elif menuInput == "5":
         summationVector = []
         n = input("How many numbers would you like to summate?\n>")
         x=0
         while x != int(n):
-            x+1
+            x=+1
             num = input("n"+str(n)+":")
-            summationVector.append(num)
-        print(sum(float(summationVector)))
+            summationVector.append(float(num))
+            input("Press any key to continue:\n>")
+        print(sum(summationVector))
     elif menuInput == "6":
         summationVector = []
         n = input("How many numbers would you like to Average?\n>")
         x=0
         while x != int(n):
-            x+1
+            x=x+1
             num = input("n"+str(x)+":")
-            summationVector.append(num)
-        vectorSize = len(int(summationVector))
-        summation = sum(float(summationVector))
+            summationVector.append(float(num))
+            input("Press any key to continue:\n>")
+        vectorSize = len(summationVector)
+        summation = sum(summationVector)
         print(summation/vectorSize)
     elif menuInput == "7":
         pass
